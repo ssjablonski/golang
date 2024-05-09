@@ -2,15 +2,30 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"math/rand"
 	"sort"
+
+	"github.com/fatih/color"
 )
 
 func displayForrest(forest [][]int) {
 	for i := 0; i < len(forest); i++ {
 		for j := 0; j < len(forest[i]); j++ {
-			fmt.Print(forest[i][j], " ")
+			switch forest[i][j] {
+			case 1:
+				color.New(color.FgGreen).Printf("%d ", forest[i][j])
+			case 2:
+				color.New(color.FgYellow).Printf("%d ", forest[i][j])
+			case 3:
+				color.New(color.FgBlue).Printf("%d ", forest[i][j])
+			case 4:
+				color.New(color.FgRed).Printf("%d ", forest[i][j])
+			case 5:
+				color.New(color.FgMagenta).Printf("%d ", forest[i][j])
+
+			default:
+				fmt.Printf("%d ", forest[i][j])
+			}
 		}
 		fmt.Println()
 	}
@@ -105,6 +120,7 @@ func burningForest(forest [][]int, i int, j int) {
 			burningForest(forest, i+1, j+1)
 		} else {
 			// fmt.Println("Drzewo młode na pozycji", i, j, "ocalone!")
+			forest[i][j] = 5
 		}
 	} else if forest[i][j] == 2 {
 		if random <= 89 {
@@ -119,6 +135,7 @@ func burningForest(forest [][]int, i int, j int) {
 			burningForest(forest, i+1, j+1)
 		} else {
 			// fmt.Println("Drzewo srednie na pozycji", i, j, "ocalone!")
+			forest[i][j] = 5
 		}
 	} else if forest[i][j] == 3 {
 		forest[i][j] = 4
@@ -164,16 +181,48 @@ func calculateBurnedTrees(forest [][]int) int {
 	return count
 }
 
+// func nowa() {
+// 	var ratios = make(map[int]float64)
+// 	var keys []int
+
+// 	for i := 5; i <= 95; i += 5 {
+// 		for j := 0; j < 1000; j++ {
+// 			numTrees := int(float64(400) * (float64(i) / 100.0))
+// 			las := createForrest(20, 20)
+// 			plantTree(las, numTrees)
+// 			var yD, xD int
+// 			var hit bool
+// 			for {
+// 				yD, xD, hit = thunderBolt(las)
+// 				if hit {
+// 					break
+// 				}
+// 			}
+// 			startFire(las, yD, xD)
+// 			burnedTrees := calculateBurnedTrees(las)
+// 			ratios[i] += float64(burnedTrees) / float64(numTrees)
+// 		}
+// 		ratios[i] = ratios[i] / 1000
+// 		keys = append(keys, i)
+
+// 	}
+
+// 	sort.Ints(keys)
+// 	for _, key := range keys {
+// 		fmt.Println("Poziom zalesienia:", key, "%, procent spalonych drzew:", ratios[key])
+// 	}
+
+// }
+
 func nowa() {
-	var ratios = make(map[int]float64)
-	var keys []int
-	var minRatio float64 = math.MaxFloat64
-	var optimalForestDensity int
+	var scores = make(map[int]float64) // przechowywanie wyników funkcji celu
+	var keys []int                     // przechowywanie poziomów zalesienia
 
 	for i := 5; i <= 95; i += 5 {
+		totalScore := 0.0
 		for j := 0; j < 1000; j++ {
-			numTrees := int(float64(400) * (float64(i) / 100.0))
-			las := createForrest(20, 20)
+			numTrees := int(float64(400) * (float64(i) / 100.0)) // obliczenie liczby drzew
+			las := createForrest(4, 100)
 			plantTree(las, numTrees)
 			var yD, xD int
 			var hit bool
@@ -185,24 +234,19 @@ func nowa() {
 			}
 			startFire(las, yD, xD)
 			burnedTrees := calculateBurnedTrees(las)
-			ratios[i] += float64(burnedTrees) / float64(numTrees)
+			burnedRatio := float64(burnedTrees) / float64(numTrees)
+			score := float64(i) * (1 - burnedRatio) // obliczanie wartości funkcji celu
+			totalScore += score
 		}
-		ratios[i] = ratios[i] / 1000
+		averageScore := totalScore / 1000 // obliczenie średniej wartości funkcji celu
+		scores[i] = averageScore
 		keys = append(keys, i)
-
-		// Check if the current ratio is less than the minimum ratio found so far
-		if ratios[i] < minRatio {
-			minRatio = ratios[i]
-			optimalForestDensity = i
-		}
 	}
 
-	sort.Ints(keys)
+	sort.Ints(keys) // sortowanie kluczy
 	for _, key := range keys {
-		fmt.Println("Poziom zalesienia:", key, "%, współczynnik ratio:", ratios[key])
+		fmt.Println("Poziom zalesienia:", key, "%, score:", scores[key])
 	}
-
-	fmt.Println("Optymalny poziom zalesienia:", optimalForestDensity, "% z współczynnikiem ratio:", minRatio)
 }
 
 func main() {
