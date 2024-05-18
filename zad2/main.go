@@ -181,39 +181,6 @@ func calculateBurnedTrees(forest [][]int) int {
 	return count
 }
 
-// func nowa() {
-// 	var ratios = make(map[int]float64)
-// 	var keys []int
-
-// 	for i := 5; i <= 95; i += 5 {
-// 		for j := 0; j < 1000; j++ {
-// 			numTrees := int(float64(400) * (float64(i) / 100.0))
-// 			las := createForrest(20, 20)
-// 			plantTree(las, numTrees)
-// 			var yD, xD int
-// 			var hit bool
-// 			for {
-// 				yD, xD, hit = thunderBolt(las)
-// 				if hit {
-// 					break
-// 				}
-// 			}
-// 			startFire(las, yD, xD)
-// 			burnedTrees := calculateBurnedTrees(las)
-// 			ratios[i] += float64(burnedTrees) / float64(numTrees)
-// 		}
-// 		ratios[i] = ratios[i] / 1000
-// 		keys = append(keys, i)
-
-// 	}
-
-// 	sort.Ints(keys)
-// 	for _, key := range keys {
-// 		fmt.Println("Poziom zalesienia:", key, "%, procent spalonych drzew:", ratios[key])
-// 	}
-
-// }
-
 func nowa() {
 	var scores = make(map[int]float64) // przechowywanie wyników funkcji celu
 	var keys []int                     // przechowywanie poziomów zalesienia

@@ -1,0 +1,402 @@
+[
+    {
+        "date":"2023-05-13",
+        "year":"2023",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"46",
+        "species":"White shark"
+    },
+    {
+        "date":"2023-04-29",
+        "year":"2023",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":null,
+        "species":"1m shark"
+    },
+    {
+        "date":"2022-10-07",
+        "year":"2022",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"38",
+        "species":"Bull shark"
+    },
+    {
+        "date":"2021-10-04",
+        "year":"2021",
+        "country":"USA",
+        "sex":"M",
+        "age":"25.0",
+        "species":null
+    },
+    {
+        "date":"2021-10-03",
+        "year":"2021",
+        "country":"USA",
+        "sex":"M",
+        "age":null,
+        "species":null
+    },
+    {
+        "date":"2021-05-23",
+        "year":"2021",
+        "country":"USA",
+        "sex":"M",
+        "age":"26.0",
+        "species":"5' shark"
+    },
+    {
+        "date":"2021-05-03",
+        "year":"2021",
+        "country":"USA",
+        "sex":"M",
+        "age":"14.0",
+        "species":"5.5 ft shark"
+    },
+    {
+        "date":"2021-05-01",
+        "year":"2021",
+        "country":"JAMAICA",
+        "sex":"M",
+        "age":"53.0",
+        "species":null
+    },
+    {
+        "date":"2021-03-25",
+        "year":"2021",
+        "country":"USA",
+        "sex":"F",
+        "age":"16.0",
+        "species":"3' to 5' shark"
+    },
+    {
+        "date":"2021-01-29",
+        "year":"2021",
+        "country":"AUSTRALIA",
+        "sex":"F",
+        "age":"46.0",
+        "species":null
+    },
+    {
+        "date":"2020-10-31",
+        "year":"2020",
+        "country":"USA",
+        "sex":"M",
+        "age":"17.0",
+        "species":"Blacktip shark, 6' to 7'"
+    },
+    {
+        "date":"2020-10-24",
+        "year":"2020",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"59.0",
+        "species":null
+    },
+    {
+        "date":"2020-08-02",
+        "year":"2020",
+        "country":"USA",
+        "sex":"F",
+        "age":null,
+        "species":"Nurse shark, 5'"
+    },
+    {
+        "date":"2020-02-22",
+        "year":"2020",
+        "country":"NEW ZEALAND",
+        "sex":"M",
+        "age":"60.0",
+        "species":"White shark"
+    },
+    {
+        "date":"2019-12-26",
+        "year":"2019",
+        "country":"PAPUA NEW GUINEA",
+        "sex":"M",
+        "age":"33.0",
+        "species":null
+    },
+    {
+        "date":"2019-11-14",
+        "year":"2019",
+        "country":"FRENCH POLYNESIA",
+        "sex":"M",
+        "age":"9.0",
+        "species":"5' blacktip shark"
+    },
+    {
+        "date":"2019-08-03",
+        "year":"2019",
+        "country":"USA",
+        "sex":"F",
+        "age":"21.0",
+        "species":null
+    },
+    {
+        "date":"2019-08-03",
+        "year":"2019",
+        "country":"USA",
+        "sex":"M",
+        "age":"37.0",
+        "species":null
+    },
+    {
+        "date":"2019-02-04",
+        "year":"2019",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"50.0",
+        "species":null
+    },
+    {
+        "date":"2019-01-29",
+        "year":"2019",
+        "country":"NEW ZEALAND",
+        "sex":"F",
+        "age":"17.0",
+        "species":"Reported as shark bite but injury caused by stingray"
+    },
+    {
+        "date":"2018-10-23",
+        "year":"2018",
+        "country":"USA",
+        "sex":"F",
+        "age":null,
+        "species":"3' to 4' shark"
+    },
+    {
+        "date":"2018-07-24",
+        "year":"2018",
+        "country":"CHINA",
+        "sex":"F",
+        "age":"6.0",
+        "species":null
+    },
+    {
+        "date":"2018-06-25",
+        "year":"2018",
+        "country":"USA",
+        "sex":"F",
+        "age":"57.0",
+        "species":"White shark"
+    },
+    {
+        "date":"2017-09-24",
+        "year":"2017",
+        "country":"USA",
+        "sex":"M",
+        "age":"33.0",
+        "species":"Questionable"
+    },
+    {
+        "date":"2017-07-07",
+        "year":"2017",
+        "country":"SOUTH AFRICA",
+        "sex":"F",
+        "age":"13.0",
+        "species":"White shark, 2.5 m"
+    },
+    {
+        "date":"2017-06-10",
+        "year":"2017",
+        "country":"USA",
+        "sex":"M",
+        "age":"19.0",
+        "species":null
+    },
+    {
+        "date":"2017-03-01",
+        "year":"2017",
+        "country":"BAHAMAS",
+        "sex":"F",
+        "age":null,
+        "species":"Nurse shark"
+    },
+    {
+        "date":"2017-01-13",
+        "year":"2017",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"57.0",
+        "species":null
+    },
+    {
+        "date":"2016-12-24",
+        "year":"2016",
+        "country":"AUSTRALIA",
+        "sex":"F",
+        "age":null,
+        "species":"a small shark"
+    },
+    {
+        "date":"2016-09-06",
+        "year":"2016",
+        "country":"NEW CALEDONIA",
+        "sex":"M",
+        "age":"50.0",
+        "species":null
+    },
+    {
+        "date":"2016-07-15",
+        "year":"2016",
+        "country":"USA",
+        "sex":"M",
+        "age":null,
+        "species":null
+    },
+    {
+        "date":"2016-06-23",
+        "year":"2016",
+        "country":"SOUTH AFRICA",
+        "sex":"M",
+        "age":"43.0",
+        "species":"White shark"
+    },
+    {
+        "date":"2016-04-19",
+        "year":"2016",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"12.0",
+        "species":"Wobbegong shark"
+    },
+    {
+        "date":"2016-01-02",
+        "year":"2016",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"31.0",
+        "species":"3 m shark"
+    },
+    {
+        "date":"2015-12-13",
+        "year":"2015",
+        "country":"AUSTRALIA",
+        "sex":null,
+        "age":null,
+        "species":"White shark, 3.5 m"
+    },
+    {
+        "date":"2015-11-07",
+        "year":"2015",
+        "country":"USA",
+        "sex":"F",
+        "age":"9.0",
+        "species":"Shark involvement not confirmed"
+    },
+    {
+        "date":"2015-10-09",
+        "year":"2015",
+        "country":"USA",
+        "sex":"M",
+        "age":"25.0",
+        "species":"Tiger shark, 13'"
+    },
+    {
+        "date":"2015-07-02",
+        "year":"2015",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"32",
+        "species":"White shark"
+    },
+    {
+        "date":"2015-06-17",
+        "year":"2015",
+        "country":"USA",
+        "sex":"M",
+        "age":"10",
+        "species":null
+    },
+    {
+        "date":"2015-06-01",
+        "year":"2015",
+        "country":"REUNION",
+        "sex":"M",
+        "age":"47",
+        "species":"Bull shark, 2.5 m"
+    },
+    {
+        "date":"2015-01-16",
+        "year":"2015",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"17",
+        "species":"1.5 m shark"
+    },
+    {
+        "date":"2014-11-29",
+        "year":"2014",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"13",
+        "species":null
+    },
+    {
+        "date":"2014-10-29",
+        "year":"2014",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":"20",
+        "species":null
+    },
+    {
+        "date":"2014-10-14",
+        "year":"2014",
+        "country":"USA",
+        "sex":"F",
+        "age":"7",
+        "species":"Bull shark, 3' to 4'"
+    },
+    {
+        "date":"2014-10-02",
+        "year":"2014",
+        "country":"USA",
+        "sex":"M",
+        "age":"28",
+        "species":"8' to 10' shark"
+    },
+    {
+        "date":"2014-08-01",
+        "year":"2014",
+        "country":"SOUTH AFRICA",
+        "sex":"M",
+        "age":"20",
+        "species":"White shark"
+    },
+    {
+        "date":"2014-06-25",
+        "year":"2014",
+        "country":"BAHAMAS",
+        "sex":"M",
+        "age":"42",
+        "species":"Caribbean reef shark, 7' to 8'"
+    },
+    {
+        "date":"2014-06-01",
+        "year":"2014",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":null,
+        "species":null
+    },
+    {
+        "date":"2014-01-26",
+        "year":"2014",
+        "country":"AUSTRALIA",
+        "sex":"M",
+        "age":null,
+        "species":"1m shark"
+    },
+    {
+        "date":"2013-11-22",
+        "year":"2013",
+        "country":"USA",
+        "sex":"M",
+        "age":"25",
+        "species":"White shark, 10 '"   
+    }
+]
