@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -27,34 +28,58 @@ var (
 	postsMu sync.Mutex
 )
 
-func init() {
+func main() {
+	loadPostsFromFile()
 
+	http.HandleFunc("/posts", postsHandler)
+	http.HandleFunc("/posts/", postHandler)
+
+	fmt.Println("Server is running at http://localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))
+
+	sendPosts()
+}
+
+func loadPostsFromFile() {
 	data, err := os.ReadFile("data.json")
 	if err != nil {
 		log.Fatalf("Error reading JSON file: %v", err)
 	}
 
-	var allAttacks []Post
-	if err := json.Unmarshal(data, &allAttacks); err != nil {
+	var allPosts []Post
+	if err := json.Unmarshal(data, &allPosts); err != nil {
 		log.Fatalf("Error unmarshalling JSON data: %v", err)
 	}
 
 	// Select 10 random records
 	for i := 0; i < 10; i++ {
-		index := rand.Intn(len(allAttacks))
-		post := allAttacks[index]
+		index := rand.Intn(len(allPosts))
+		post := allPosts[index]
 		post.ID = nextID
 		posts[nextID] = post
 		nextID++
 	}
 }
 
-func main() {
-	http.HandleFunc("/posts", postsHandler)
-	http.HandleFunc("/posts/", postHandler)
+func sendPosts() {
+	for _, post := range posts {
+		postJSON, err := json.Marshal(post)
+		if err != nil {
+			log.Printf("Error marshalling post: %v", err)
+			continue
+		}
 
-	fmt.Println("Server is running at http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+		resp, err := http.Post("http://localhost:8080/posts", "application/json", bytes.NewBuffer(postJSON))
+		if err != nil {
+			log.Printf("Error sending post: %v", err)
+			continue
+		}
+
+		defer resp.Body.Close()
+		if resp.StatusCode != http.StatusCreated {
+			log.Printf("Unexpected response status: %s", resp.Status)
+		}
+	}
 }
 
 func postsHandler(w http.ResponseWriter, r *http.Request) {
